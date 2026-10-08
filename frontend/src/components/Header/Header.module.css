@@ -1,0 +1,97 @@
+.header {
+  width: 100%;
+  border-bottom: 1px solid #eeeeee;
+  background: #ffffff;
+}
+
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  min-height: 72px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.leftNav,
+.rightNav {
+  display: flex;
+  align-items: center;
+}
+
+.leftNav {
+  gap: 28px;
+}
+
+.leftNav a {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.rightNav {
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.rightNav button {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.rightNav svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+@media (max-width: 768px) {
+  .container {
+    min-height: 64px;
+    padding: 0 16px;
+  }
+
+  .leftNav {
+    display: none;
+  }
+
+  .logo {
+    font-size: 19px;
+  }
+
+  .rightNav {
+    gap: 4px;
+  }
+
+  .rightNav button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .rightNav button:nth-child(2),
+  .rightNav button:nth-child(3) {
+    display: none;
+  }
+
+  .rightNav svg {
+    width: 18px;
+    height: 18px;
+  }
+}

@@ -1,0 +1,48 @@
+.search {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #777777;
+}
+
+.inputWrapper {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #cccccc;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #111111;
+  font-size: 13px;
+}
+
+.input::placeholder {
+  color: #999999;
+}
+
+.button {
+  padding: 10px 0 10px 16px;
+  border: 0;
+  background: transparent;
+  color: #111111;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+.button:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

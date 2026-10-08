@@ -1,0 +1,64 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px 16px;
+}
+
+.card {
+  min-width: 0;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: #f2f2f2;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.content {
+  padding-top: 14px;
+}
+
+.title {
+  width: 75%;
+  height: 12px;
+  margin-bottom: 10px;
+  background: #eeeeee;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.category {
+  width: 45%;
+  height: 9px;
+  margin-bottom: 10px;
+  background: #eeeeee;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.price {
+  width: 30%;
+  height: 10px;
+  background: #eeeeee;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.55;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.55;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 12px;
+  }
+}

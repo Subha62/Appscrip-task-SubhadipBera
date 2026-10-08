@@ -1,0 +1,46 @@
+generator client {
+  provider            = "prisma-client"
+  output              = "../generated/prisma"
+  moduleFormat        = "cjs"
+  importFileExtension = "js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Category {
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
+  products Product[]
+}
+
+model Product {
+  id          Int            @id @default(autoincrement())
+  title       String
+  slug        String         @unique
+  description String
+  price       Decimal        @db.Decimal(10, 2)
+  categoryId  Int
+  rating      Float?
+  stock       Int            @default(0)
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  category Category       @relation(fields: [categoryId], references: [id])
+  images   ProductImage[]
+
+  @@index([categoryId])
+  @@index([price])
+}
+
+model ProductImage {
+  id        Int     @id @default(autoincrement())
+  url       String
+  altText   String
+  productId Int
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@index([productId])
+}

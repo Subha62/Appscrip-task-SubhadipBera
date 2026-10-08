@@ -1,0 +1,58 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 40px 0 20px;
+  border-top: 1px solid #eeeeee;
+  margin-top: 40px;
+}
+
+.pagination > a,
+.pagination > span {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.pagination a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.pages {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.pages a {
+  min-width: 24px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.pages a.active {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.disabled {
+  color: #aaaaaa;
+}
+
+@media (max-width: 768px) {
+  .pagination {
+    gap: 20px;
+    padding-top: 32px;
+  }
+
+  .pages {
+    gap: 10px;
+  }
+
+  .pagination > a,
+  .pagination > span {
+    font-size: 10px;
+  }
+}

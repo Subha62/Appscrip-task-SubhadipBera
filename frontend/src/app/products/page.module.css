@@ -1,0 +1,39 @@
+.page {
+  width: 100%;
+  background: #ffffff;
+}
+
+.content {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.productsSection {
+  padding: 0 32px 64px;
+}
+
+.catalog {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.products {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .productsSection {
+    padding: 0 16px 40px;
+  }
+
+  .catalog {
+    display: block;
+  }
+
+  .catalog > aside {
+    display: none;
+  }
+}
